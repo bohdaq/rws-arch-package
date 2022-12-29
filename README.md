@@ -14,7 +14,9 @@
 
 - You may need to run commands listed below as an administrator
 
-> pacman -U rust-web-server-**VERSION**.pkg.tar.zst
+Replace _VERSION_ with version you've built.
+
+> pacman -U rust-web-server-_VERSION_.pkg.tar.zst
 
 
 ### Test installation:
