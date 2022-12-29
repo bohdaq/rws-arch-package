@@ -2,9 +2,11 @@
 
 ### To install rws as Pacman package:
 
-- Make sure you have Rust installed.
+- Make sure you have Rust and base-devel package installed.
 
 > pacman -S rust
+> 
+> pacman -S base-devel
 
 - Clone repository
 
