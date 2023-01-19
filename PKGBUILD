@@ -1,7 +1,7 @@
 # Maintainer: Bohdan Tsap <bohdan.tsap@tutanota.com>
 pkgname=rust-web-server
 binname=rws
-pkgver=8.0.5
+pkgver=9.0.0
 pkgrel=1
 epoch=
 pkgdesc="Static content web-server written in Rust"
@@ -21,13 +21,13 @@ options=()
 install=
 changelog=
 source=("$pkgname-$pkgver.tar.gz::https://github.com/bohdaq/$pkgname/archive/$pkgver.tar.gz")
-sha512sums=('c0b945a1a48016dc0505e06b1802248986a4cd6c73c3917ab299d9b0a73cf5758936ddba09c1d3cb1d23bc8fe0afe6c107aaf459d2b7625598919e1e6b2c6b92')
+sha256sums=('9d67f2e53798def27ce3c9bec3d4d290f2e241afcd48664616f2df0a20b3b374')
 noextract=()
 validpgpkeys=()
 
 prepare() {
 	cd $pkgname-$pkgver
-	cargo fetch --offline --target "$CARCH-unknown-linux-gnu"	
+	cargo fetch --target "$CARCH-unknown-linux-gnu"
 }
 
 build() {
@@ -40,7 +40,7 @@ build() {
 check() {
 	cd $pkgname-$pkgver
 	export RUST_TOOLCHAIN=stable
-	cargo test --frozen --all-features	
+	cargo test --frozen --all-features
 }
 
 package() {
