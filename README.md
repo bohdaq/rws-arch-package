@@ -1,24 +1,35 @@
 ## Arch Linux Pacman package for Rust Web Server
 
-### To install rws as Pacman package:
+### Install rws as Pacman package
 
-- Make sure you have Rust and base-devel package installed.
+#### 1. Install Rust 
 
 > pacman -S rust
-> 
+ 
+#### 2. Install required developer tools
+
 > pacman -S base-devel
 
-- Clone repository
+#### 3. Build package
+
+> cd ~
+
+> mkdir git 
+
+> cd git
+
+> git clone git@github.com:bohdaq/rws-arch-package.git
 
 > cd rws-arch-package
-> 
+ 
 > makepkg
 
-- You may need to run commands listed below as an administrator
+> ls -l
+
 
 Replace _VERSION_ with version you've built.
 
-> pacman -U rust-web-server-_VERSION_.pkg.tar.zst
+> sudo pacman -U rust-web-server-_VERSION_.pkg.tar.zst
 
 
 ### Test installation:
